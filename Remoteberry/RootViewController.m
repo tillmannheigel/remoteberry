@@ -73,7 +73,7 @@
     if (buttonIndex == 1) {
         [nsu setObject:[alertView textFieldAtIndex:0].text forKey:@"defaultAddress"];
         NetworkCommunication *com = [[NetworkCommunication alloc] init];
-        [com connectToHost];
+        [NSThread detachNewThreadSelector:@selector(connectToHost) toTarget:com withObject:nil];
     }
 }
 
