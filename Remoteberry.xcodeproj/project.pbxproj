@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1077110B197D49B200127650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110A197D49B200127650 /* Foundation.framework */; };
+		1077110D197D49B200127650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110C197D49B200127650 /* CoreGraphics.framework */; };
+		1077110F197D49B200127650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110E197D49B200127650 /* UIKit.framework */; };
+		10771115197D49B200127650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10771113197D49B200127650 /* InfoPlist.strings */; };
+		10771117197D49B200127650 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10771116197D49B200127650 /* main.m */; };
+		1077111B197D49B200127650 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077111A197D49B200127650 /* AppDelegate.m */; };
+		1077111D197D49B200127650 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1077111C197D49B200127650 /* Images.xcassets */; };
+		10771124197D49B200127650 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10771123197D49B200127650 /* XCTest.framework */; };
+		10771125197D49B200127650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110A197D49B200127650 /* Foundation.framework */; };
+		10771126197D49B200127650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110E197D49B200127650 /* UIKit.framework */; };
+		1077112E197D49B200127650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1077112C197D49B200127650 /* InfoPlist.strings */; };
+		10771130197D49B200127650 /* RemoteberryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077112F197D49B200127650 /* RemoteberryTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10771127197D49B200127650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107710FF197D49B200127650 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10771106197D49B200127650;
+			remoteInfo = Remoteberry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10771107197D49B200127650 /* Remoteberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remoteberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1077110A197D49B200127650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1077110C197D49B200127650 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1077110E197D49B200127650 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		10771112197D49B200127650 /* Remoteberry-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Remoteberry-Info.plist"; sourceTree = "<group>"; };
+		10771114197D49B200127650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		10771116197D49B200127650 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10771118197D49B200127650 /* Remoteberry-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Remoteberry-Prefix.pch"; sourceTree = "<group>"; };
+		10771119197D49B200127650 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1077111A197D49B200127650 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1077111C197D49B200127650 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		10771122197D49B200127650 /* RemoteberryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteberryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10771123197D49B200127650 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1077112B197D49B200127650 /* RemoteberryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemoteberryTests-Info.plist"; sourceTree = "<group>"; };
+		1077112D197D49B200127650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1077112F197D49B200127650 /* RemoteberryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteberryTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10771104197D49B200127650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1077110D197D49B200127650 /* CoreGraphics.framework in Frameworks */,
+				1077110F197D49B200127650 /* UIKit.framework in Frameworks */,
+				1077110B197D49B200127650 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1077111F197D49B200127650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10771124197D49B200127650 /* XCTest.framework in Frameworks */,
+				10771126197D49B200127650 /* UIKit.framework in Frameworks */,
+				10771125197D49B200127650 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		107710FE197D49B200127650 = {
+			isa = PBXGroup;
+			children = (
+				10771110197D49B200127650 /* Remoteberry */,
+				10771129197D49B200127650 /* RemoteberryTests */,
+				10771109197D49B200127650 /* Frameworks */,
+				10771108197D49B200127650 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10771108197D49B200127650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10771107197D49B200127650 /* Remoteberry.app */,
+				10771122197D49B200127650 /* RemoteberryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10771109197D49B200127650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1077110A197D49B200127650 /* Foundation.framework */,
+				1077110C197D49B200127650 /* CoreGraphics.framework */,
+				1077110E197D49B200127650 /* UIKit.framework */,
+				10771123197D49B200127650 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10771110197D49B200127650 /* Remoteberry */ = {
+			isa = PBXGroup;
+			children = (
+				10771119197D49B200127650 /* AppDelegate.h */,
+				1077111A197D49B200127650 /* AppDelegate.m */,
+				1077111C197D49B200127650 /* Images.xcassets */,
+				10771111197D49B200127650 /* Supporting Files */,
+			);
+			path = Remoteberry;
+			sourceTree = "<group>";
+		};
+		10771111197D49B200127650 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10771112197D49B200127650 /* Remoteberry-Info.plist */,
+				10771113197D49B200127650 /* InfoPlist.strings */,
+				10771116197D49B200127650 /* main.m */,
+				10771118197D49B200127650 /* Remoteberry-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10771129197D49B200127650 /* RemoteberryTests */ = {
+			isa = PBXGroup;
+			children = (
+				1077112F197D49B200127650 /* RemoteberryTests.m */,
+				1077112A197D49B200127650 /* Supporting Files */,
+			);
+			path = RemoteberryTests;
+			sourceTree = "<group>";
+		};
+		1077112A197D49B200127650 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1077112B197D49B200127650 /* RemoteberryTests-Info.plist */,
+				1077112C197D49B200127650 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10771106197D49B200127650 /* Remoteberry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10771133197D49B200127650 /* Build configuration list for PBXNativeTarget "Remoteberry" */;
+			buildPhases = (
+				10771103197D49B200127650 /* Sources */,
+				10771104197D49B200127650 /* Frameworks */,
+				10771105197D49B200127650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Remoteberry;
+			productName = Remoteberry;
+			productReference = 10771107197D49B200127650 /* Remoteberry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10771121197D49B200127650 /* RemoteberryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10771136197D49B200127650 /* Build configuration list for PBXNativeTarget "RemoteberryTests" */;
+			buildPhases = (
+				1077111E197D49B200127650 /* Sources */,
+				1077111F197D49B200127650 /* Frameworks */,
+				10771120197D49B200127650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10771128197D49B200127650 /* PBXTargetDependency */,
+			);
+			name = RemoteberryTests;
+			productName = RemoteberryTests;
+			productReference = 10771122197D49B200127650 /* RemoteberryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		107710FF197D49B200127650 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					10771121197D49B200127650 = {
+						TestTargetID = 10771106197D49B200127650;
+					};
+				};
+			};
+			buildConfigurationList = 10771102197D49B200127650 /* Build configuration list for PBXProject "Remoteberry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 107710FE197D49B200127650;
+			productRefGroup = 10771108197D49B200127650 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10771106197D49B200127650 /* Remoteberry */,
+				10771121197D49B200127650 /* RemoteberryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10771105197D49B200127650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10771115197D49B200127650 /* InfoPlist.strings in Resources */,
+				1077111D197D49B200127650 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10771120197D49B200127650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1077112E197D49B200127650 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10771103197D49B200127650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1077111B197D49B200127650 /* AppDelegate.m in Sources */,
+				10771117197D49B200127650 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1077111E197D49B200127650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10771130197D49B200127650 /* RemoteberryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10771128197D49B200127650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10771106197D49B200127650 /* Remoteberry */;
+			targetProxy = 10771127197D49B200127650 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10771113197D49B200127650 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10771114197D49B200127650 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1077112C197D49B200127650 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1077112D197D49B200127650 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10771131197D49B200127650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		10771132197D49B200127650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10771134197D49B200127650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Remoteberry/Remoteberry-Prefix.pch";
+				INFOPLIST_FILE = "Remoteberry/Remoteberry-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		10771135197D49B200127650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Remoteberry/Remoteberry-Prefix.pch";
+				INFOPLIST_FILE = "Remoteberry/Remoteberry-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		10771137197D49B200127650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Remoteberry.app/Remoteberry";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Remoteberry/Remoteberry-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RemoteberryTests/RemoteberryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		10771138197D49B200127650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Remoteberry.app/Remoteberry";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Remoteberry/Remoteberry-Prefix.pch";
+				INFOPLIST_FILE = "RemoteberryTests/RemoteberryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10771102197D49B200127650 /* Build configuration list for PBXProject "Remoteberry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10771131197D49B200127650 /* Debug */,
+				10771132197D49B200127650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10771133197D49B200127650 /* Build configuration list for PBXNativeTarget "Remoteberry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10771134197D49B200127650 /* Debug */,
+				10771135197D49B200127650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		10771136197D49B200127650 /* Build configuration list for PBXNativeTarget "RemoteberryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10771137197D49B200127650 /* Debug */,
+				10771138197D49B200127650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 107710FF197D49B200127650 /* Project object */;
+}
