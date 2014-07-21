@@ -19,6 +19,8 @@
 		10771126197D49B200127650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110E197D49B200127650 /* UIKit.framework */; };
 		1077112E197D49B200127650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1077112C197D49B200127650 /* InfoPlist.strings */; };
 		10771130197D49B200127650 /* RemoteberryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077112F197D49B200127650 /* RemoteberryTests.m */; };
+		1077113B197D4B8800127650 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113A197D4B8800127650 /* RootViewController.m */; };
+		1077113E197D567400127650 /* NetworkCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113D197D567400127650 /* NetworkCommunication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		1077112B197D49B200127650 /* RemoteberryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemoteberryTests-Info.plist"; sourceTree = "<group>"; };
 		1077112D197D49B200127650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1077112F197D49B200127650 /* RemoteberryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteberryTests.m; sourceTree = "<group>"; };
+		10771139197D4B8800127650 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1077113A197D4B8800127650 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1077113C197D567400127650 /* NetworkCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCommunication.h; sourceTree = "<group>"; };
+		1077113D197D567400127650 /* NetworkCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCommunication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 				1077111A197D49B200127650 /* AppDelegate.m */,
 				1077111C197D49B200127650 /* Images.xcassets */,
 				10771111197D49B200127650 /* Supporting Files */,
+				10771139197D4B8800127650 /* RootViewController.h */,
+				1077113A197D4B8800127650 /* RootViewController.m */,
+				1077113C197D567400127650 /* NetworkCommunication.h */,
+				1077113D197D567400127650 /* NetworkCommunication.m */,
 			);
 			path = Remoteberry;
 			sourceTree = "<group>";
@@ -239,7 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1077111B197D49B200127650 /* AppDelegate.m in Sources */,
+				1077113E197D567400127650 /* NetworkCommunication.m in Sources */,
 				10771117197D49B200127650 /* main.m in Sources */,
+				1077113B197D4B8800127650 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
