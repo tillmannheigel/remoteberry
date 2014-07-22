@@ -19,7 +19,7 @@
     NSArray* splittedEvent= [event componentsSeparatedByString:@":"];
 
     
-    if ([[splittedEvent objectAtIndex:0] isEqualToValue:(int)0]) {
+    if ((int)[splittedEvent objectAtIndex:0]==0) {
         return false;
     }
     
