@@ -10,6 +10,10 @@
 #import "NetworkCommunication.h"
 
 @interface RootViewController () <UIAlertViewDelegate>
+{
+    NetworkCommunication *com;
+
+}
 
 @end
 
@@ -27,8 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self addButton];
+    com = [[NetworkCommunication alloc] init];
+    self.view.backgroundColor = [UIColor purpleColor];
+    [self setButtons];
+    [self setActivityIndicator];
     [self showAlertView];
 }
 
@@ -39,7 +45,7 @@
 }
 
 -(void)showAlertView{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"..." message:@"What is your pi's ip (or dns)?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"..." message:@"your pi's ip (or domain)?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
     [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
     NSString *address = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultAddress"];
     if (address) {
@@ -49,10 +55,13 @@
         
 }
 
--(void)addButton{
-    UIButton *myButton = [[UIButton alloc] init];
-    [myButton setTitle:@"Connect" forState:UIControlStateNormal];
-    [self.view addSubview:myButton];
+-(void)setButtons{
+    [self.connectButton setTitle:@"Connect" forState:UIControlStateNormal];
+    [self.sendButton setTitle:@"Send" forState:UIControlStateNormal];
+}
+
+-(void)setActivityIndicator{
+    [self.activityIndicator setHidden:true];
 }
 
 /*
@@ -72,9 +81,18 @@
     NSUserDefaults *nsu = [NSUserDefaults standardUserDefaults];
     if (buttonIndex == 1) {
         [nsu setObject:[alertView textFieldAtIndex:0].text forKey:@"defaultAddress"];
-        NetworkCommunication *com = [[NetworkCommunication alloc] init];
         [NSThread detachNewThreadSelector:@selector(connectToHost) toTarget:com withObject:nil];
     }
+}
+
+
+- (IBAction)connectButtonClicked:(id)sender {
+    [NSThread detachNewThreadSelector:@selector(connectToHost) toTarget:com withObject:nil];
+
+}
+
+- (IBAction)sendButtonClicked:(id)sender {
+    //[NSThread detachNewThreadSelector:@selector(sendGreeting) toTarget:com withObject:nil];
 }
 
 

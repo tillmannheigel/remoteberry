@@ -8,12 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NetworkCommunication : NSObject{
-
-NSInputStream *inputStream;
-NSOutputStream *outputStream;
-    
-}
+@interface NetworkCommunication : NSObject <NSStreamDelegate>
 
 -(void)connectToHost;
 

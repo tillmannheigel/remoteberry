@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101B4B59197E64DF00945956 /* EventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B4B58197E64DF00945956 /* EventHandler.m */; };
 		1077110B197D49B200127650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110A197D49B200127650 /* Foundation.framework */; };
 		1077110D197D49B200127650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110C197D49B200127650 /* CoreGraphics.framework */; };
 		1077110F197D49B200127650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110E197D49B200127650 /* UIKit.framework */; };
@@ -21,6 +22,7 @@
 		10771130197D49B200127650 /* RemoteberryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077112F197D49B200127650 /* RemoteberryTests.m */; };
 		1077113B197D4B8800127650 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113A197D4B8800127650 /* RootViewController.m */; };
 		1077113E197D567400127650 /* NetworkCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113D197D567400127650 /* NetworkCommunication.m */; };
+		10771140197D746500127650 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1077113F197D746500127650 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101B4B57197E64DF00945956 /* EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHandler.h; sourceTree = "<group>"; };
+		101B4B58197E64DF00945956 /* EventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHandler.m; sourceTree = "<group>"; };
 		10771107197D49B200127650 /* Remoteberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remoteberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1077110A197D49B200127650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1077110C197D49B200127650 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +58,7 @@
 		1077113A197D4B8800127650 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		1077113C197D567400127650 /* NetworkCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCommunication.h; sourceTree = "<group>"; };
 		1077113D197D567400127650 /* NetworkCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCommunication.m; sourceTree = "<group>"; };
+		1077113F197D746500127650 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +124,11 @@
 				10771111197D49B200127650 /* Supporting Files */,
 				10771139197D4B8800127650 /* RootViewController.h */,
 				1077113A197D4B8800127650 /* RootViewController.m */,
+				1077113F197D746500127650 /* RootViewController.xib */,
 				1077113C197D567400127650 /* NetworkCommunication.h */,
 				1077113D197D567400127650 /* NetworkCommunication.m */,
+				101B4B57197E64DF00945956 /* EventHandler.h */,
+				101B4B58197E64DF00945956 /* EventHandler.m */,
 			);
 			path = Remoteberry;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			files = (
 				10771115197D49B200127650 /* InfoPlist.strings in Resources */,
 				1077111D197D49B200127650 /* Images.xcassets in Resources */,
+				10771140197D746500127650 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 			files = (
 				1077111B197D49B200127650 /* AppDelegate.m in Sources */,
 				1077113E197D567400127650 /* NetworkCommunication.m in Sources */,
+				101B4B59197E64DF00945956 /* EventHandler.m in Sources */,
 				10771117197D49B200127650 /* main.m in Sources */,
 				1077113B197D4B8800127650 /* RootViewController.m in Sources */,
 			);
@@ -448,6 +458,7 @@
 				10771135197D49B200127650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10771136197D49B200127650 /* Build configuration list for PBXNativeTarget "RemoteberryTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +467,7 @@
 				10771138197D49B200127650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
