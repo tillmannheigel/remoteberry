@@ -6,10 +6,11 @@
 //
 //
 
-#import "RootViewController.h"
+#import "SettingsViewController.h"
 #import "Communicator.h"
+#import "MainViewController.h"
 
-@interface RootViewController () <UIAlertViewDelegate>
+@interface SettingsViewController ()
 {
     Communicator *com;
 
@@ -17,7 +18,7 @@
 
 @end
 
-@implementation RootViewController
+@implementation SettingsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,13 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter addObserver:self selector:@selector(login) name:@"Login" object:nil];
-    com = [[Communicator alloc] init];
-    self.view.backgroundColor = [UIColor purpleColor];
+    [self setNotificationReceiver];
+    [self setCommunicator];
     [self setButtons];
     [self setActivityIndicator];
-    [self showAlertView];
+    [self setTextFields];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,49 +45,41 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)showAlertView{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"..." message:@"your pi's ip (or domain)?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    NSString *address = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultAddress"];
-    if (address) {
-        [[alert textFieldAtIndex:0] setText:address];
-    }
-    [alert show];
-        
+-(void)setNotificationReceiver{
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(login) name:@"login" object:nil];
+}
+
+-(void)setCommunicator{
+    com = [[Communicator alloc] init];
 }
 
 -(void)setButtons{
     [self.connectButton setTitle:@"Connect" forState:UIControlStateNormal];
-    [self.sendButton setTitle:@"wer is zu hause?" forState:UIControlStateNormal];
 }
 
 -(void)setActivityIndicator{
     [self.activityIndicator setHidden:true];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSUserDefaults *nsu = [NSUserDefaults standardUserDefaults];
-    if (buttonIndex == 1) {
-        [nsu setObject:[alertView textFieldAtIndex:0].text forKey:@"defaultAddress"];
-        [NSThread detachNewThreadSelector:@selector(connectToHost) toTarget:com withObject:nil];
+-(void)setTextFields{
+    //ip_domainField
+    NSString *address = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultAddress"];
+    if (address) {
+        [self.ip_domainField setText:address];
+    }
+    //portField
+    NSString *port = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultPort"];
+    if (port) {
+        [self.portField setText:port];
     }
 }
 
-
 - (IBAction)connectButtonClicked:(id)sender {
+    [self resignFirstResponder];
+    NSUserDefaults *nsu = [NSUserDefaults standardUserDefaults];
+    [nsu setObject:self.ip_domainField.text forKey:@"defaultAddress"];
+    [nsu setObject:self.portField.text forKey:@"defaultPort"];
     [NSThread detachNewThreadSelector:@selector(connectToHost) toTarget:com withObject:nil];
 
 }
@@ -98,7 +89,9 @@
 }
 
 -(void)login{
-    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
+    MainViewController *main = [[MainViewController alloc] init];
+    [self.navigationController pushViewController:main animated:true];
+    NSLog(@"Login");
 }
 
 

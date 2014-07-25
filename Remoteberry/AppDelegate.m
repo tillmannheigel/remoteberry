@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -15,7 +15,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    RootViewController *rvc = [[RootViewController alloc] init];
+    SettingsViewController *rvc = [[SettingsViewController alloc] init];
     [self.window setRootViewController:rvc];
     [self.window makeKeyAndVisible];
     return YES;

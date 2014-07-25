@@ -4,11 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
                 <outlet property="activityIndicator" destination="h2Y-Ks-zcE" id="hgM-k5-0WS"/>
                 <outlet property="connectButton" destination="YKH-iU-MN1" id="d7X-lA-45X"/>
-                <outlet property="sendButton" destination="btG-FD-8SK" id="R4H-Qi-upd"/>
+                <outlet property="ip_domainField" destination="Uqa-Vw-COJ" id="eIT-0O-JyE"/>
+                <outlet property="portField" destination="awo-jz-ocF" id="CV0-FL-cJi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YQx-ly-9VS"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKH-iU-MN1">
-                    <rect key="frame" x="137" y="518" width="46" height="30"/>
+                    <rect key="frame" x="137" y="108" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,26 +29,35 @@
                     </connections>
                 </button>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="h2Y-Ks-zcE">
-                    <rect key="frame" x="150" y="523" width="20" height="20"/>
+                    <rect key="frame" x="150" y="108" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btG-FD-8SK">
-                    <rect key="frame" x="137" y="480" width="46" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your pi's ip (or domain)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uqa-Vw-COJ">
+                    <rect key="frame" x="20" y="70" width="189" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="sendButtonClicked:" destination="-1" eventType="touchUpInside" id="7e3-Ii-Da6"/>
-                    </connections>
-                </button>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="Nby-9x-VKk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="port" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awo-jz-ocF">
+                    <rect key="frame" x="217" y="70" width="83" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="btG-FD-8SK" secondAttribute="centerX" id="3Qp-Fh-cWg"/>
-                <constraint firstItem="YKH-iU-MN1" firstAttribute="top" secondItem="btG-FD-8SK" secondAttribute="bottom" constant="8" id="DCW-2v-82T"/>
+                <constraint firstItem="awo-jz-ocF" firstAttribute="leading" secondItem="Uqa-Vw-COJ" secondAttribute="trailing" constant="8" id="3Jv-lm-J5j"/>
                 <constraint firstAttribute="centerX" secondItem="YKH-iU-MN1" secondAttribute="centerX" id="Gds-Zp-kba"/>
-                <constraint firstAttribute="bottom" secondItem="YKH-iU-MN1" secondAttribute="bottom" constant="20" id="NWl-Nx-CdP"/>
+                <constraint firstItem="awo-jz-ocF" firstAttribute="baseline" secondItem="Uqa-Vw-COJ" secondAttribute="baseline" id="PgJ-dt-QR3"/>
+                <constraint firstItem="YKH-iU-MN1" firstAttribute="top" secondItem="Uqa-Vw-COJ" secondAttribute="bottom" constant="8" id="Pwj-4R-UXj"/>
+                <constraint firstItem="Uqa-Vw-COJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dkD-WR-sdn"/>
+                <constraint firstItem="Uqa-Vw-COJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="eWa-Pj-tgi"/>
+                <constraint firstAttribute="trailing" secondItem="awo-jz-ocF" secondAttribute="trailing" constant="20" id="tCW-C1-ncn"/>
+                <constraint firstItem="awo-jz-ocF" firstAttribute="leading" secondItem="Uqa-Vw-COJ" secondAttribute="trailing" constant="8" id="x1I-xM-If7"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

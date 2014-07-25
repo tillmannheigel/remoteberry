@@ -11,5 +11,6 @@
 @interface Communicator : NSObject <NSStreamDelegate>
 
 -(void)connectToHost;
+-(void)whoIsAtHome;
 
 @end

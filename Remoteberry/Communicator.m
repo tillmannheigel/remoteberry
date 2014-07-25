@@ -20,9 +20,10 @@
 @implementation Communicator
 -(void)connectToHost{
     NSString *address = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultAddress"];
+    NSNumber *port = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultPort"];
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)address, 51396, &readStream, &writeStream);
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)address, [port intValue], &readStream, &writeStream);
     inputStream = (__bridge NSInputStream*)readStream;
     outputStream = (__bridge NSOutputStream*)writeStream;
     

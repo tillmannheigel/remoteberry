@@ -32,9 +32,28 @@
         return false;
     }
     
-    NSLog(@"Server meldet ok.\nNachricht empfangen");
-    NSLog(@"Typ:%@",[splittedEvent objectAtIndex:1]);
+    NSLog(@"Nachricht empfangen");
+    return [self recognizeType:splittedEvent];
+}
+
++(Boolean)recognizeType:(NSArray*)event{
+    NSString *type = [event objectAtIndex:1];
+    if ([type isEqual:@"login"]) {
+        return [self loginEvent:event];
+    } else{
+    NSLog(@"Type has not been recognized");
+    return false;
+    }
+}
+
++(Boolean)loginEvent:(NSArray*)event{
+    //if
+    //bla...
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:@"login" object:nil];
     return true;
 }
+
+
 
 @end

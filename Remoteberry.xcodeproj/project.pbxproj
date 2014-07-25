@@ -22,9 +22,9 @@
 		10771126197D49B200127650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1077110E197D49B200127650 /* UIKit.framework */; };
 		1077112E197D49B200127650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1077112C197D49B200127650 /* InfoPlist.strings */; };
 		10771130197D49B200127650 /* RemoteberryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077112F197D49B200127650 /* RemoteberryTests.m */; };
-		1077113B197D4B8800127650 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113A197D4B8800127650 /* RootViewController.m */; };
+		1077113B197D4B8800127650 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113A197D4B8800127650 /* SettingsViewController.m */; };
 		1077113E197D567400127650 /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1077113D197D567400127650 /* Communicator.m */; };
-		10771140197D746500127650 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1077113F197D746500127650 /* RootViewController.xib */; };
+		10771140197D746500127650 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1077113F197D746500127650 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +59,11 @@
 		1077112B197D49B200127650 /* RemoteberryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemoteberryTests-Info.plist"; sourceTree = "<group>"; };
 		1077112D197D49B200127650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1077112F197D49B200127650 /* RemoteberryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteberryTests.m; sourceTree = "<group>"; };
-		10771139197D4B8800127650 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		1077113A197D4B8800127650 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		10771139197D4B8800127650 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1077113A197D4B8800127650 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		1077113C197D567400127650 /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Communicator.h; sourceTree = "<group>"; };
 		1077113D197D567400127650 /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Communicator.m; sourceTree = "<group>"; };
-		1077113F197D746500127650 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		1077113F197D746500127650 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +139,9 @@
 				1077111A197D49B200127650 /* AppDelegate.m */,
 				1077111C197D49B200127650 /* Images.xcassets */,
 				10771111197D49B200127650 /* Supporting Files */,
-				10771139197D4B8800127650 /* RootViewController.h */,
-				1077113A197D4B8800127650 /* RootViewController.m */,
-				1077113F197D746500127650 /* RootViewController.xib */,
+				10771139197D4B8800127650 /* SettingsViewController.h */,
+				1077113A197D4B8800127650 /* SettingsViewController.m */,
+				1077113F197D746500127650 /* SettingsViewController.xib */,
 				10739C50198297B2001AF7C9 /* MainViewController.h */,
 				10739C51198297B2001AF7C9 /* MainViewController.m */,
 				10739C52198297B2001AF7C9 /* MainViewController.xib */,
@@ -254,7 +254,7 @@
 			files = (
 				10771115197D49B200127650 /* InfoPlist.strings in Resources */,
 				1077111D197D49B200127650 /* Images.xcassets in Resources */,
-				10771140197D746500127650 /* RootViewController.xib in Resources */,
+				10771140197D746500127650 /* SettingsViewController.xib in Resources */,
 				10739C54198297B2001AF7C9 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +279,7 @@
 				1077113E197D567400127650 /* Communicator.m in Sources */,
 				101B4B59197E64DF00945956 /* EventHandler.m in Sources */,
 				10771117197D49B200127650 /* main.m in Sources */,
-				1077113B197D4B8800127650 /* RootViewController.m in Sources */,
+				1077113B197D4B8800127650 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
