@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NetworkCommunication : NSObject <NSStreamDelegate>
+@interface Communicator : NSObject <NSStreamDelegate>
 
 -(void)connectToHost;
 

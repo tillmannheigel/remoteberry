@@ -6,10 +6,10 @@
 //
 //
 
-#import "NetworkCommunication.h"
+#import "Communicator.h"
 #import "EventHandler.h"
 
-@interface NetworkCommunication ()
+@interface Communicator ()
 {
     NSInputStream *inputStream;
     NSOutputStream *outputStream;
@@ -17,7 +17,7 @@
 @end
 
 
-@implementation NetworkCommunication
+@implementation Communicator
 -(void)connectToHost{
     NSString *address = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultAddress"];
     CFReadStreamRef readStream;
@@ -49,6 +49,13 @@
 	[outputStream write:[data bytes] maxLength:[data length]];
 }
 
+-(void)whoIsAtHome{
+    NSLog(@"whoIsAtHome");
+    NSString *response  = @"who:";
+	NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSUTF8StringEncoding]];
+	[outputStream write:[data bytes] maxLength:[data length]];
+}
+
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode{
 
     
@@ -58,7 +65,6 @@
 			break;
             
 		case NSStreamEventHasBytesAvailable:
-            NSLog(@"NSStreamEventHasBytesAvailable");
             if (aStream == inputStream) {
                 uint8_t buffer[1024];
                 int len;

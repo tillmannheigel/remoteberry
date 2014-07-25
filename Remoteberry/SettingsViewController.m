@@ -7,11 +7,11 @@
 //
 
 #import "RootViewController.h"
-#import "NetworkCommunication.h"
+#import "Communicator.h"
 
 @interface RootViewController () <UIAlertViewDelegate>
 {
-    NetworkCommunication *com;
+    Communicator *com;
 
 }
 
@@ -31,7 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    com = [[NetworkCommunication alloc] init];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(login) name:@"Login" object:nil];
+    com = [[Communicator alloc] init];
     self.view.backgroundColor = [UIColor purpleColor];
     [self setButtons];
     [self setActivityIndicator];
@@ -57,7 +59,7 @@
 
 -(void)setButtons{
     [self.connectButton setTitle:@"Connect" forState:UIControlStateNormal];
-    [self.sendButton setTitle:@"Send" forState:UIControlStateNormal];
+    [self.sendButton setTitle:@"wer is zu hause?" forState:UIControlStateNormal];
 }
 
 -(void)setActivityIndicator{
@@ -92,7 +94,11 @@
 }
 
 - (IBAction)sendButtonClicked:(id)sender {
-    //[NSThread detachNewThreadSelector:@selector(sendGreeting) toTarget:com withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(whoIsAtHome) toTarget:com withObject:nil];
+}
+
+-(void)login{
+    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
 }
 
 

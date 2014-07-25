@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NetworkCommunication.h"
+#import "Communicator.h"
 
 @interface EventHandler : NSObject
 
-+(Boolean)HandleEvent:(NSString*)event fromCommunication:(NetworkCommunication*)com;
++(Boolean)HandleEvent:(NSString*)event fromCommunication:(Communicator*)com;
 
 @end

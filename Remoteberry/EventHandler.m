@@ -7,23 +7,32 @@
 //
 
 #import "EventHandler.h"
-#import "NetworkCommunication.h"
+#import "Communicator.h"
 
 @implementation EventHandler
 
-+(Boolean)HandleEvent:(NSString*)event fromCommunication:(NetworkCommunication*)com{
-    if (!event||[event length]<2) {
++(Boolean)HandleEvent:(NSString*)event fromCommunication:(Communicator*)com{
+    if (!event) {
         return false;
     }
-
+    
     NSArray* splittedEvent= [event componentsSeparatedByString:@":"];
-
     
-    if ((int)[splittedEvent objectAtIndex:0]==0) {
+    for (NSString* string in splittedEvent) {
+        NSLog(string);
+    }
+
+    if ([splittedEvent count]<2) {
+        NSLog(@"Fehler:%@",@"Nachricht zu kurz");
         return false;
     }
     
-    NSLog(@"Nachricht empfangen");
+    if ([(NSString*)[splittedEvent objectAtIndex:0] isEqualToString:@"0"]) {
+        NSLog(@"Server meldet Fehler:%@",[splittedEvent objectAtIndex:1]);
+        return false;
+    }
+    
+    NSLog(@"Server meldet ok.\nNachricht empfangen");
     NSLog(@"Typ:%@",[splittedEvent objectAtIndex:1]);
     return true;
 }
